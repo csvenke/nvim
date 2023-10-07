@@ -67,4 +67,23 @@ return {
       colorscheme = "tokyonight",
     },
   },
+
+  -- ChatGPT
+  {
+    "jackMort/ChatGPT.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("chatgpt").setup({
+        api_key_cmd = "op read op://Personal/openai/password --no-newline"
+      })
+    end,
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    },
+    keys = {
+      { "<leader>cc", "<cmd>ChatGPT<cr>", desc = "ChatGPT" }
+    }
+  }
 }
