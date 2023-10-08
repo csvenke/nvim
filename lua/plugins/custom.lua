@@ -72,6 +72,9 @@ return {
   {
     "jackMort/ChatGPT.nvim",
     event = "VeryLazy",
+    enabled = function()
+      return vim.fn.executable("op")
+    end,
     config = function()
       require("chatgpt").setup({
         api_key_cmd = "op read op://Personal/openai/password --no-newline"
