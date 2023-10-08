@@ -9,20 +9,34 @@ return {
   -- Utils
   { import = "lazyvim.plugins.extras.util.project" },
 
-  -- Git
+  -- Animations
+  { import = "lazyvim.plugins.extras.ui.mini-animate" },
+
+  -- Themes
+  { "projekt0n/github-nvim-theme" },
+  { "shaunsingh/nord.nvim" },
+  { "AlexvZyl/nordic.nvim" },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "nordic",
+    },
+  },
+
+  -- Diffview
   {
     "sindrets/diffview.nvim",
     opts = {
       show_help_hints = false,
       keymaps = {
         view = {
-          { "n", "<leader>gd", "<cmd>DiffviewClose<cr>", remap = true, desc = "..." },
+          { "n", "<leader>gd", "<cmd>DiffviewClose<cr>", remap = true },
         },
         diff2 = {
-          { "n", "<leader>gd", "<cmd>DiffviewClose<cr>", remap = true, desc = "..." },
+          { "n", "<leader>gd", "<cmd>DiffviewClose<cr>", remap = true },
         },
         file_panel = {
-          { "n", "<leader>gd", "<cmd>DiffviewClose<cr>", remap = true, desc = "..." },
+          { "n", "<leader>gd", "<cmd>DiffviewClose<cr>", remap = true },
         },
       },
     },
@@ -55,16 +69,6 @@ return {
         ["markdown.mdx"] = { { "prettierd", "prettier" } },
         ["graphql"] = { { "prettierd", "prettier" } },
       },
-    },
-  },
-
-  -- Personality
-  { import = "lazyvim.plugins.extras.ui.mini-animate" },
-  { "projekt0n/github-nvim-theme" },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "tokyonight",
     },
   },
 
