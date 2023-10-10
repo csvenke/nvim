@@ -77,12 +77,10 @@ return {
     "jackMort/ChatGPT.nvim",
     event = "VeryLazy",
     enabled = function()
-      return vim.fn.executable("op") == 1
+      return vim.fn.getenv("OPENAI_API_KEY") ~= nil
     end,
     config = function()
-      require("chatgpt").setup({
-        api_key_cmd = "op read op://Personal/openai/password --no-newline",
-      })
+      require("chatgpt").setup()
     end,
     dependencies = {
       "MunifTanjim/nui.nvim",
