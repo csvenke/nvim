@@ -46,7 +46,6 @@ return {
   },
 
   -- Formatting
-  { import = "lazyvim.plugins.extras.formatting.conform" },
   { import = "lazyvim.plugins.extras.formatting.prettier" },
   {
     "stevearc/conform.nvim",
