@@ -1,20 +1,7 @@
 return {
-  -- Language support
-  { import = "lazyvim.plugins.extras.lang.java" },
-  { import = "lazyvim.plugins.extras.lang.rust" },
-  { import = "lazyvim.plugins.extras.lang.typescript" },
-  { import = "lazyvim.plugins.extras.lang.json" },
-  { import = "lazyvim.plugins.extras.lang.docker" },
-
-  -- Utils
-  { import = "lazyvim.plugins.extras.util.project" },
-
-  -- Animations
-  { import = "lazyvim.plugins.extras.ui.mini-animate" },
-
   -- Themes
-  { "projekt0n/github-nvim-theme" },
-  { "shaunsingh/nord.nvim" },
+  -- { "projekt0n/github-nvim-theme" },
+  -- { "shaunsingh/nord.nvim" },
   { "AlexvZyl/nordic.nvim" },
   {
     "LazyVim/LazyVim",
@@ -46,7 +33,6 @@ return {
   },
 
   -- Formatting
-  { import = "lazyvim.plugins.extras.formatting.prettier" },
   {
     "stevearc/conform.nvim",
     optional = true,
@@ -87,7 +73,8 @@ return {
       "nvim-telescope/telescope.nvim",
     },
     keys = {
-      { "<leader>cc", "<cmd>ChatGPT<cr>", desc = "ChatGPT" },
+      { "<leader>cc", "<cmd>ChatGPT<cr>", desc = "AI Prompt" },
+      { "<leader>ce", "<cmd>ChatGPTEditWithInstruction<cr>", desc = "AI Edit", mode = { "n", "v" } },
     },
   },
 }
