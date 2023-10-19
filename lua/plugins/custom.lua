@@ -17,43 +17,18 @@ return {
       show_help_hints = false,
       keymaps = {
         view = {
-          { "n", "<leader>gd", "<cmd>DiffviewClose<cr>", remap = true },
+          { "n", "<leader>gd", "<cmd>DiffviewClose<cr>" },
         },
         diff2 = {
-          { "n", "<leader>gd", "<cmd>DiffviewClose<cr>", remap = true },
+          { "n", "<leader>gd", "<cmd>DiffviewClose<cr>" },
         },
         file_panel = {
-          { "n", "<leader>gd", "<cmd>DiffviewClose<cr>", remap = true },
+          { "n", "<leader>gd", "<cmd>DiffviewClose<cr>" },
         },
       },
     },
     keys = {
       { "<leader>gd", "<cmd>DiffviewOpen<cr>", desc = "diff" },
-    },
-  },
-
-  -- Formatting
-  {
-    "stevearc/conform.nvim",
-    optional = true,
-    opts = {
-      formatters_by_ft = {
-        ["javascript"] = { { "prettierd", "prettier" } },
-        ["javascriptreact"] = { { "prettierd", "prettier" } },
-        ["typescript"] = { { "prettierd", "prettier" } },
-        ["typescriptreact"] = { { "prettierd", "prettier" } },
-        ["vue"] = { { "prettierd", "prettier" } },
-        ["css"] = { { "prettierd", "prettier" } },
-        ["scss"] = { { "prettierd", "prettier" } },
-        ["less"] = { { "prettierd", "prettier" } },
-        ["html"] = { { "prettierd", "prettier" } },
-        ["json"] = { { "prettierd", "prettier" } },
-        ["jsonc"] = { { "prettierd", "prettier" } },
-        ["yaml"] = { { "prettierd", "prettier" } },
-        ["markdown"] = { { "prettierd", "prettier" } },
-        ["markdown.mdx"] = { { "prettierd", "prettier" } },
-        ["graphql"] = { { "prettierd", "prettier" } },
-      },
     },
   },
 
