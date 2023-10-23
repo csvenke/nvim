@@ -1,12 +1,19 @@
 return {
   -- Themes
-  -- { "projekt0n/github-nvim-theme" },
-  -- { "shaunsingh/nord.nvim" },
   { "AlexvZyl/nordic.nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "nordic",
+    },
+  },
+
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      diagnostics = {
+        underline = false,
+      },
     },
   },
 
