@@ -1,15 +1,18 @@
 return {
   -- Themes
-  { "AlexvZyl/nordic.nvim" },
+  { "AlexvZyl/nordic.nvim", event = "VeryLazy" },
   {
     "LazyVim/LazyVim",
+    event = "VeryLazy",
     opts = {
       colorscheme = "nordic",
     },
   },
 
+  -- LSP
   {
     "neovim/nvim-lspconfig",
+    event = "VeryLazy",
     opts = {
       diagnostics = {
         underline = false,
@@ -17,9 +20,36 @@ return {
     },
   },
 
+  -- Editor
+  {
+    "folke/edgy.nvim",
+    event = "VeryLazy",
+    opts = {
+      left = {
+        {
+          title = "File explorer",
+          ft = "neo-tree",
+          filter = function(buf)
+            return vim.b[buf].neo_tree_source == "filesystem"
+          end,
+          pinned = true,
+          open = function()
+            vim.api.nvim_input("<esc><space>e")
+          end,
+          size = { height = 0.5 },
+        },
+        "neo-tree",
+      },
+      animate = {
+        enabled = false,
+      },
+    },
+  },
+
   -- Diffview
   {
     "sindrets/diffview.nvim",
+    event = "VeryLazy",
     opts = {
       show_help_hints = false,
       keymaps = {
