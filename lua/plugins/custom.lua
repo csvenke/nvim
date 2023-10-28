@@ -1,6 +1,26 @@
 return {
   -- Themes
-  { "AlexvZyl/nordic.nvim", event = "VeryLazy" },
+  {
+    "folke/tokyonight.nvim",
+    event = "VeryLazy",
+  },
+  {
+    "AlexvZyl/nordic.nvim",
+    event = "VeryLazy",
+    opts = function()
+      local colors = require("nordic.colors")
+      return {
+        override = {
+          NeoTreeTitleBar = {
+            fg = colors.yellow.dim,
+          },
+          NeoTreeGitUntracked = {
+            fg = colors.white0,
+          },
+        },
+      }
+    end,
+  },
   {
     "LazyVim/LazyVim",
     event = "VeryLazy",
