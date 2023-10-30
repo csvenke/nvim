@@ -42,6 +42,16 @@ return {
 
   -- Editor
   {
+    "christoomey/vim-tmux-navigator",
+    event = "VeryLazy",
+    keys = {
+      { "<C-H>", "<cmd>TmuxNavigateLeft<cr>", desc = "window left" },
+      { "<C-L>", "<cmd>TmuxNavigateRight<cr>", desc = "window right" },
+      { "<C-J>", "<cmd>TmuxNavigateDown<cr>", desc = "window down" },
+      { "<C-K>", "<cmd>TmuxNavigateUp<cr>", desc = "window up" },
+    },
+  },
+  {
     "folke/edgy.nvim",
     event = "VeryLazy",
     init = function()
